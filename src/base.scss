@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,400&display=swap");
+
+$lado: "Lato", sans-serif;
+$font-large: 3rem;
+$font-medium: 2rem;
+$font-small: 1rem;
+
+body {
+  font-family: $lado;
+  font-weight: normal;
+  margin: 0;
+  color: #202020;
+  width: 100vw;
+}

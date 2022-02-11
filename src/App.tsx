@@ -1,22 +1,13 @@
 import React from 'react';
+import './base.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>Hello world.</p>
-      </header>
+    <div className='test'>
+      <h1>Hello world</h1>
+      <div>
+        <h1>hello testing</h1>
+      </div>
     </div>
   );
 }
