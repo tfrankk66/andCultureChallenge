@@ -1,13 +1,13 @@
 import React from 'react';
+import Container from './components/Container';
+import Title from './components/Title';
 import './base.scss';
 
 function App() {
   return (
-    <div className='test'>
-      <h1>Hello world</h1>
-      <div>
-        <h1>hello testing</h1>
-      </div>
+    <div>
+      <Title text='OpenBrewery List App'/>
+      <Container />
     </div>
   );
 }
