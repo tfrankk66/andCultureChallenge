@@ -1,11 +1,14 @@
 import React from "react";
+import Dropdown from "./Dropdown";
 import '../styles/Filter.scss'
 
 const Filter = () => {
 
     return(
         <div className="filterContainer">
-            <p>Hello World</p>
+            <Dropdown label="States"/>
+            <Dropdown label="Cities"/>
+            <Dropdown label="Brewery Type"/>
         </div>
     )
 }

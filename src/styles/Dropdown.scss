@@ -1,0 +1,24 @@
+@import "../base.scss";
+
+select {
+  width: 50%;
+  height: 90%;
+  border: 1px solid $secondary-color;
+  color: white;
+  background-color: $secondary-color;
+}
+
+.dropdown {
+  width: 30%;
+  display: inherit;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.dropdown__label {
+  white-space: nowrap;
+  margin: {
+    right: 1rem;
+  }
+}

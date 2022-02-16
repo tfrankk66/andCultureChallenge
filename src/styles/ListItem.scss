@@ -1,0 +1,54 @@
+@import "../base.scss";
+
+.listitem {
+  height: 10%;
+  margin: {
+    top: 1em;
+  }
+  width: 95%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $secondary-color;
+  color: white;
+  border: 2px solid $secondary-shade;
+  border-radius: 5px;
+
+  &__info {
+    display: inherit;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  &__text {
+    white-space: nowrap;
+    margin: {
+      left: 1rem;
+      right: 1rem;
+      top: 0;
+      bottom: 0.5rem;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: white;
+      margin: {
+        left: 1rem;
+        right: 1rem;
+        top: 0;
+        bottom: 0.5rem;
+      }
+
+      &:hover {
+        color: $secondary-shade;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
