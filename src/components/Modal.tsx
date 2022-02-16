@@ -1,7 +1,6 @@
 import React from "react";
 import '../styles/Modal.scss';
 import GoogleMapReact from 'google-map-react';
-import { isTemplateExpression } from "typescript";
 
 type modalProps = {
     info: {
@@ -20,12 +19,22 @@ type markerProps = {
     text: string
 }
 
-const MarkerComp = ({ lat, lng, text }: markerProps) => <div>{text}</div>
+const MarkerComp = ({ lat, lng, text }: markerProps) => <div style={{
+    color: 'white',
+    background: 'grey',
+    padding: '15px 10px',
+    display: 'inline-flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+    transform: 'translate(-50%, -50%)'
+}}>{text}</div>
 
 const Modal = ({ info, isOpen, togOpen }: modalProps): JSX.Element => {
     const showModal = isOpen ? "modal display-block" : "modal display-none";
-    const center = { lat: 55.56, lng: 45.8 };
-    const zoom = 11;
+    const center = { lat: 31, lng: -100.00 };
+    const zoom = 4;
 
     return (
         <div className={showModal}>
@@ -35,10 +44,10 @@ const Modal = ({ info, isOpen, togOpen }: modalProps): JSX.Element => {
                 <p>{info.address}</p>
                 <p>{info.long}</p>
                 <p>{info.lat}</p>
-                <GoogleMapReact defaultCenter={center} defaultZoom={zoom} bootstrapURLKeys={{ key: "AIzaSyAFfqfzrLoBI_jj7GY1JQDvg-yWK0uVuGo" }}>
-                    <MarkerComp lat={116.202929}
-                        lng={43.618516}
-                        text={'Kreyser Avrora'} />
+                <GoogleMapReact defaultCenter={center} defaultZoom={zoom} bootstrapURLKeys={{ key: "testing" }}>
+                    <MarkerComp lat={Number(info.lat)}
+                        lng={Number(info.long)}
+                        text={info.name} />
                 </GoogleMapReact>
                 <button type="button" onClick={() => togOpen(false)}>Close</button>
             </section>

@@ -6,7 +6,7 @@ import './base.scss';
 function App() {
   return (
     <div>
-      <Title text='OpenBrewery List App'/>
+      <Title text='OpenBrewery List App' />
       <Container />
     </div>
   );
